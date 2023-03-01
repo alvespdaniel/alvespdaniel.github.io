@@ -1,0 +1,128 @@
+#header {
+  max-width: 1440px;
+  padding: 40px 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header img {
+  height: 60px;
+}
+
+#header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#header-menu a {
+  padding: 10px 20px;
+  color: #141414;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+#header-menu a:hover {
+  color: #70DA1C;
+  transition: 0.3s;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1030px) {
+  #header img {
+    height: 40px;
+  }
+
+  #header-menu a {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #header {
+    padding-top: 30px;
+    /* flex-direction: column; */
+    gap: 40px;
+  }
+
+  #header-menu {
+    gap: 5px;
+  }
+
+  #header-menu a {
+    font-size: 1rem;
+  }
+
+  #header-menu a:hover {
+    font-size: 1rem;
+    color: #141414;
+  }
+}
+
+@media (max-width: 650px) {
+  #header {
+    justify-content: center;
+  }
+  
+  #header-menu {
+    display: none;
+  }
+
+  #header-img {
+    position: relative;
+  }
+
+  #header-img::after {
+    content: 'Sobre Mim ▼';
+    white-space: nowrap;
+    color: #141414;
+    position: absolute;
+    left: 250px;
+    top: 13px;
+  }
+}
+
+@media (max-width: 580px) {
+
+  #header {
+    padding: 30px;
+    padding-left: 40px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  #header-menu {
+    display: none;
+  }
+
+  #header-img {
+    height: 40px;
+    position: relative;
+  } 
+
+  /* #header-img::after {
+    content: '☰';
+    padding: 5px 12px 7px 12px;
+    display: inline-block;
+    background-image: linear-gradient( to top, #A6FF37, #5BCD00);
+    border-radius: 5px;
+    position: absolute;
+    top: 7px;
+    right: -240px;
+  }  */
+} 
+
+@media (max-width: 380px) {
+  #header {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 0px;
+    padding-left: 30px;
+  }
+
+  #header-img::after {
+    display: none;
+  }
+}

@@ -1,0 +1,120 @@
+#lobo {
+  max-width: 100%;
+  display: block;
+}
+
+#apresentacao {
+  max-width: 1440px;
+  padding: 40px 60px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+#apresentacao h1 {
+  font-size: 4.5rem;
+  justify-self: center;
+  line-height: 1.11;
+  position: relative;
+}
+
+#apresentacao h1::before {
+  content: " ";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../img/detalhe.svg) no-repeat center;
+  position: absolute;
+  left: -30px;
+  top: -18px;
+  z-index: -1;
+}
+
+#apresentacao p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+#apresentacao div {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 1024px) {
+  #apresentacao h1 {
+    font-size: 3.25rem;
+  }
+  
+  #apresentacao p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 850px) {
+  #apresentacao {
+    grid-template-columns: 1fr;
+  }
+
+  #apresentacao h1 {
+    text-align: center;
+  }
+
+  #apresentacao h1 br:not(#and){
+    display: none;
+  }
+
+  #apresentacao h1::before {
+    left: -16px;
+  }
+
+  #apresentacao p {
+    text-align: center;
+  }
+
+  #lobo {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  #apresentacao h1::before {
+    display: none;
+  }
+
+  #apresentacao {
+    padding-top: 30px;
+  }
+
+  #apresentacao h1,
+  #apresentacao p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 380px) {
+  #apresentacao h1 {
+    font-size: 3rem;
+  }
+
+  #apresentacao p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 330px) {
+  #apresentacao h1 {
+    font-size: 2.5rem;
+  }
+
+  #apresentacao p {
+    font-size: 0.9rem;
+  }
+} 
+
+
+
+
+
+
